@@ -21,36 +21,24 @@ public class Solution319BulbSwitcher {
 	 */
 
 	/**
-	 * <br>
-	 * 000000
-	 * <br>
-	 * 111111
-	 * <br>
-	 * 101010
-	 * <br>
-	 * 100011
-	 * <br>
-	 * 100111
-	 * <br>
-	 * 100101
-	 * <br>
-	 * 100100
-	 * 
 	 * <p>
-	 * opt(k) = opt(k-1)+k的公约数是否为奇数
+	 * opt(k) = opt(k-1)+k的约数是否为奇数
+	 * <p>
+	 * 约数一定成对出现,除非是平方数36=1x36,2x18,3x12,4x9,6x6
+	 * <p>
+	 * 对于n,n以内的平方数的个数 小于等于 sqrt(n),也就是亮灯的个数小于等于sqrt(n)
+	 * <p>
+	 * 因此最后亮灯的个数为sqrt(n)向下取整
 	 * 
 	 * @param n
 	 * @return
 	 */
 	public int bulbSwitch(int n) {
 
-		// 求n的公约数的个数
-		int count = commonDivisor(n);
-
-		return n;
+		return (int) Math.sqrt(n);
 	}
 
-	private int commonDivisor(int n) {
-		return 0;
+	public static void main(String[] args) {
+		System.out.println(new Solution319BulbSwitcher().bulbSwitch(100));
 	}
 }
