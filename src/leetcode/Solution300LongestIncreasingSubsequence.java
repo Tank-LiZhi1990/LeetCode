@@ -21,8 +21,8 @@ public class Solution300LongestIncreasingSubsequence {
 	 * [1,2,3,4,5,6,7]<br/>
 	 * <p>
 	 * 
-	 * @param nums
-	 * @return
+	 * @param nums 整数数组
+	 * @return 最大长度
 	 */
 	public int lengthOfLIS(int[] nums) {
 
